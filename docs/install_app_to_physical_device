@@ -1,0 +1,5 @@
+add path to adb:
+export PATH=$PATH:/%home_path%/Android/Sdk/platform-tools
+
+Then, run command: 
+adb install -r app/build/outputs/apk/app-debug-unaligned.apk
