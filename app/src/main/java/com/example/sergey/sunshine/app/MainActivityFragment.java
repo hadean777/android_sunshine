@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import java.io.BufferedReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,15 +38,7 @@ public class MainActivityFragment extends Fragment {
                 "Thurs - Asteroids - 75/65",
                 "Fri - Heavy Rain - 65/56",
                 "Sat - HELP TRAPPED IN WEATHERSTATION - 60/51",
-                "Sun - Sunny - 80/68",
-                "One more",
-                "Other part of list",
-                "Other part of list 2",
-                "Other part of list 3",
-                "Other part of list 4",
-                "Other part of list 5",
-                "Other part of list 6",
-                "Other part of list 7"
+                "Sun - Sunny - 80/68"
         };
 
         List<String> weekForecast = new ArrayList<String>(Arrays.asList(forecastArray));
@@ -61,7 +56,6 @@ public class MainActivityFragment extends Fragment {
         // Get a reference to ListView and attach this adapter to ListView
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(mForecastAdapter);
-
 
         return rootView;
     }
